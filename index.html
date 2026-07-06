@@ -8,22 +8,37 @@
   <meta name="description" content="Yao Xiao's academic homepage" />
   <meta name="google-site-verification" content="yy_3iiS_X6pJdegdwitJMrH0LRLHXwpjrV9RKLXxKjg" />
   <link rel="shortcut icon" href="img/xx.jpg" />
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.style.colorScheme = theme;
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="./css/jemdoc.css" />
+  <link rel="stylesheet" href="./css/jemdoc.css?v=20260706-theme-layout2" />
 </head>
 <body>
   <div class="masthead">
     <div class="masthead__inner-wrap">
       <div class="masthead__menu">
         <nav id="site-nav" class="greedy-nav">
-          <button aria-label="Menu"><span class="navicon"></span></button>
+          <button class="greedy-nav__toggle" aria-label="Menu"><span class="navicon"></span></button>
           <ul class="visible-links">
             <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="/">Yao Xiao</a></li>
             <li class="masthead__menu-item"><a href="#about-me">About Me</a></li>
             <li class="masthead__menu-item"><a href="#-educations">Educations</a></li>
             <li class="masthead__menu-item"><a href="#-publications">Publications</a></li>
             <li class="masthead__menu-item"><a href="#-honors-and-awards">Honors and Awards</a></li>
-            <li id="theme-toggle" class="masthead__menu-item persist tail"><a role="button" aria-label="Toggle theme"><i id="theme-icon" class="fas fa-sun" aria-hidden="true"></i></a></li>
+            <li class="masthead__menu-item persist tail"><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme"><span id="theme-label" aria-hidden="true">☀</span></button></li>
           </ul>
           <ul class="hidden-links hidden"></ul>
         </nav>
@@ -41,12 +56,14 @@
         <div class="author__content">
           <h3 class="author__name">Yao Xiao</h3>
           <p class="author__pronouns">肖尧</p>
-          <p class="author__bio">Joint Ph.D. Candidate</p>
+          <p class="author__bio">
+            Ph.D. Candidate <a href="https://en.ustc.edu.cn/" target="_blank" rel="noopener">USTC</a><br />
+            Joint Ph.D. Candidate <a href="https://www.cityu.edu.hk/" target="_blank" rel="noopener">CityUHK</a>
+          </p>
         </div>
 
         <div class="author__urls-wrapper">
           <ul class="author__urls social-icons">
-            <li><div style="white-space: normal; margin-bottom: 1em;"><a href="https://en.ustc.edu.cn/" target="_blank" rel="noopener">USTC</a> · <a href="https://www.cityu.edu.hk/" target="_blank" rel="noopener">CityUHK</a> School of Data Science</div></li>
             <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Hefei / Hong Kong</li>
             <li><a href="mailto:litxiaoyao@mail.ustc.edu.cn"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
             <li><a href="https://github.com/litxiaoyao" target="_blank" rel="noopener"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
@@ -68,7 +85,7 @@
 
           <div class="about-intro">
             <p>
-              Hi, I'm <span class="intro-highlight">Yao Xiao (肖尧)</span> 👋, currently a Ph.D. candidate in the School of Artificial Intelligence and Data Science at the <a href="https://en.ustc.edu.cn/" target="_blank" rel="noopener">University of Science and Technology of China (USTC)</a>, and a joint Ph.D. student in the School of Data Science at <a href="https://www.cityu.edu.hk/" target="_blank" rel="noopener">City University of Hong Kong (CityUHK)</a>. I am advised by Prof. <a href="http://staff.ustc.edu.cn/~tongxu/index_zh.html" target="_blank" rel="noopener">Tong Xu</a> and Prof. <a href="https://zhaoxyai.github.io/" target="_blank" rel="noopener">Xiangyu Zhao</a>.
+              Hi, I'm <span class="intro-highlight">Yao Xiao (肖尧)</span> 👋, currently a Ph.D. candidate in the School of Artificial Intelligence and Data Science at the <a href="https://en.ustc.edu.cn/" target="_blank" rel="noopener">University of Science and Technology of China (USTC)</a>, and a joint Ph.D. student in the Department of Data Science at <a href="https://www.cityu.edu.hk/" target="_blank" rel="noopener">City University of Hong Kong (CityUHK)</a>. I am advised by Prof. <a href="http://staff.ustc.edu.cn/~tongxu/index_zh.html" target="_blank" rel="noopener">Tong Xu</a> and Prof. <a href="https://zhaoxyai.github.io/" target="_blank" rel="noopener">Xiangyu Zhao</a>.
             </p>
 
             <p>
@@ -106,13 +123,13 @@
               <span class="timeline-date">2024.9-Present</span>
               <div class="timeline-title">Ph.D. Candidate</div>
               <div class="timeline-subtitle"><a href="https://en.ustc.edu.cn/" target="_blank" rel="noopener">University of Science and Technology of China (USTC)</a></div>
-              <div class="timeline-location"><i class="fa fa-map-marker-alt"></i> School of Artificial Intelligence and Data Science · advised by Prof. Tong Xu</div>
+              <div class="timeline-location"><i class="fa fa-map-marker-alt"></i> School of Artificial Intelligence and Data Science · advised by Prof. <a href="http://staff.ustc.edu.cn/~tongxu/index_zh.html" target="_blank" rel="noopener">Tong Xu</a></div>
             </div>
             <div class="timeline-item">
               <span class="timeline-date">2026.9-Present</span>
               <div class="timeline-title">Joint Ph.D. Candidate</div>
               <div class="timeline-subtitle"><a href="https://www.cityu.edu.hk/" target="_blank" rel="noopener">City University of Hong Kong (CityUHK)</a></div>
-              <div class="timeline-location"><i class="fa fa-map-marker-alt"></i> School of Data Science · advised by Prof. <a href="https://zhaoxyai.github.io/" target="_blank" rel="noopener">Xiangyu Zhao</a></div>
+              <div class="timeline-location"><i class="fa fa-map-marker-alt"></i> Department of Data Science · advised by Prof. <a href="https://zhaoxyai.github.io/" target="_blank" rel="noopener">Xiangyu Zhao</a></div>
             </div>
           </div>
 
@@ -195,26 +212,31 @@
 
   <script>
     (function() {
-      const themeToggle = document.getElementById('theme-toggle');
-      const themeIcon = document.getElementById('theme-icon');
-      const htmlElement = document.documentElement;
-      const currentTheme = localStorage.getItem('theme') || 'light';
-      htmlElement.setAttribute('data-theme', currentTheme);
-      updateThemeIcon(currentTheme);
-      if (themeToggle) {
-        themeToggle.addEventListener('click', function(e) {
-          e.preventDefault();
-          const current = htmlElement.getAttribute('data-theme');
-          const next = current === 'light' ? 'dark' : 'light';
-          htmlElement.setAttribute('data-theme', next);
-          localStorage.setItem('theme', next);
-          updateThemeIcon(next);
-        });
+      const root = document.documentElement;
+      const toggle = document.getElementById('theme-toggle');
+      const label = document.getElementById('theme-label');
+
+      function applyTheme(theme) {
+        root.setAttribute('data-theme', theme);
+        root.style.colorScheme = theme;
+        try { localStorage.setItem('theme', theme); } catch (e) {}
+        if (label) {
+          label.textContent = theme === 'dark' ? '☾' : '☀';
+        }
+        if (toggle) {
+          toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+          toggle.setAttribute('title', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+        }
       }
-      function updateThemeIcon(theme) {
-        if (!themeIcon) return;
-        themeIcon.classList.toggle('fa-sun', theme !== 'dark');
-        themeIcon.classList.toggle('fa-moon', theme === 'dark');
+
+      const initial = root.getAttribute('data-theme') || 'light';
+      applyTheme(initial);
+
+      if (toggle) {
+        toggle.addEventListener('click', function() {
+          const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+          applyTheme(current === 'dark' ? 'light' : 'dark');
+        });
       }
     })();
   </script>
