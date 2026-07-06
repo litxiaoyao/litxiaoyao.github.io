@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="no-js" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,168 +8,226 @@
   <meta name="description" content="Yao Xiao's academic homepage" />
   <meta name="google-site-verification" content="yy_3iiS_X6pJdegdwitJMrH0LRLHXwpjrV9RKLXxKjg" />
   <link rel="shortcut icon" href="img/xx.jpg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="./css/jemdoc.css" />
 </head>
 <body>
-  <header class="site-header">
-    <nav class="top-nav" aria-label="Main navigation">
-      <a class="brand" href="#home">Yao Xiao</a>
-      <div class="nav-links">
-        <a href="#about">About Me</a>
-        <a href="#education">Education</a>
-        <a href="#publications">Publications</a>
-        <a href="#honors">Honors</a>
+  <div class="masthead">
+    <div class="masthead__inner-wrap">
+      <div class="masthead__menu">
+        <nav id="site-nav" class="greedy-nav">
+          <button aria-label="Menu"><span class="navicon"></span></button>
+          <ul class="visible-links">
+            <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="/">Yao Xiao</a></li>
+            <li class="masthead__menu-item"><a href="#about-me">About Me</a></li>
+            <li class="masthead__menu-item"><a href="#-educations">Educations</a></li>
+            <li class="masthead__menu-item"><a href="#-publications">Publications</a></li>
+            <li class="masthead__menu-item"><a href="#-honors-and-awards">Honors and Awards</a></li>
+            <li id="theme-toggle" class="masthead__menu-item persist tail"><a role="button" aria-label="Toggle theme"><i id="theme-icon" class="fas fa-sun" aria-hidden="true"></i></a></li>
+          </ul>
+          <ul class="hidden-links hidden"></ul>
+        </nav>
       </div>
-    </nav>
-  </header>
+    </div>
+  </div>
 
-  <main id="home" class="page-shell">
-    <aside class="profile-card">
-      <a href="https://litxiaoyao.github.io/" class="avatar-link" aria-label="Yao Xiao homepage">
-        <img class="avatar" src="img/xxx.jpg" alt="Yao Xiao" />
-      </a>
-      <h1>Yao Xiao</h1>
-      <h2>肖尧</h2>
-      <p class="role">Ph.D. Candidate</p>
-      <p class="affiliation">School of Artificial Intelligence and Data Science<br />University of Science and Technology of China</p>
+  <div id="main" role="main">
+    <div class="sidebar sticky">
+      <div itemscope itemtype="http://schema.org/Person" class="profile_box">
+        <div class="author__avatar">
+          <img src="img/xxx.jpg" class="author__avatar" alt="Yao Xiao" fetchpriority="high" />
+        </div>
 
-      <ul class="profile-meta">
-        <li><span aria-hidden="true">📍</span> Hefei, China</li>
-        <li><span aria-hidden="true">✉️</span> <a href="mailto:litxiaoyao@mail.ustc.edu.cn">Email</a></li>
-      </ul>
+        <div class="author__content">
+          <h3 class="author__name">Yao Xiao</h3>
+          <p class="author__pronouns">肖尧</p>
+          <p class="author__bio">Ph.D. Candidate</p>
+        </div>
 
-      <div class="social-links">
-        <a href="https://scholar.google.com/citations?user=PGgmEkIAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-        <a href="https://github.com/litxiaoyao" target="_blank" rel="noopener">GitHub</a>
+        <div class="author__urls-wrapper">
+          <ul class="author__urls social-icons">
+            <li><div style="white-space: normal; margin-bottom: 1em;">School of Artificial Intelligence and Data Science, USTC</div></li>
+            <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> Hefei, China</li>
+            <li><a href="mailto:litxiaoyao@mail.ustc.edu.cn"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
+            <li><a href="https://github.com/litxiaoyao" target="_blank" rel="noopener"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+            <li><a href="https://scholar.google.com/citations?user=PGgmEkIAAAAJ" target="_blank" rel="noopener"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i> Google Scholar</a></li>
+          </ul>
+          <div class="author__urls_sm">
+            <a href="mailto:litxiaoyao@mail.ustc.edu.cn" aria-label="Email"><i class="fas fa-fw fa-envelope"></i></a>
+            <a href="https://github.com/litxiaoyao" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-fw fa-github"></i></a>
+            <a href="https://scholar.google.com/citations?user=PGgmEkIAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-fw fa-graduation-cap"></i></a>
+          </div>
+        </div>
       </div>
-    </aside>
+    </div>
 
-    <section class="content-panel">
-      <section id="about" class="section about-intro">
-        <span class="anchor"></span>
-        <h2>About Me</h2>
-        <p>
-          Hi, I am <span class="intro-highlight">Yao Xiao (肖尧)</span>, a Ph.D. candidate in the School of Artificial Intelligence and Data Science at the University of Science and Technology of China, advised by <a href="http://staff.ustc.edu.cn/~tongxu/index_zh.html" target="_blank" rel="noopener">Prof. Tong Xu</a>.
-        </p>
-        <p>
-          My research mainly focuses on large language models and multimodal learning, with an interest in building reliable, interpretable, and adaptive AI systems.
-        </p>
-        <div class="research-interests" aria-label="Research interests">
-          <span class="interest-tag">Large Language Models</span>
-          <span class="interest-tag">Multimodal Learning</span>
-          <span class="interest-tag">Model Reliability</span>
-          <span class="interest-tag">AI for Science</span>
-        </div>
-      </section>
+    <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+      <div class="page__inner-wrap">
+        <section class="page__content" itemprop="text">
+          <span class="anchor" id="about-me"></span>
 
-      <section class="section news-section" aria-labelledby="news-title">
-        <h2 id="news-title">News</h2>
-        <div class="news-list">
-          <article class="news-item">
-            <time>2024.04</time>
-            <p>One paper was accepted by IEEE Transactions on Affective Computing (TAFFC), 2024.</p>
-          </article>
-          <article class="news-item">
-            <time>2023.02</time>
-            <p>One paper was accepted by International Conference on Intelligent Computing (ICIC), 2023.</p>
-          </article>
-        </div>
-      </section>
+          <div class="about-intro">
+            <p>
+              Hi, I'm <span class="intro-highlight">Yao Xiao (肖尧)</span> 👋, currently a Ph.D. candidate in the School of Artificial Intelligence and Data Science at the <a href="https://en.ustc.edu.cn/" target="_blank" rel="noopener">University of Science and Technology of China</a>, advised by Prof. <a href="http://staff.ustc.edu.cn/~tongxu/index_zh.html" target="_blank" rel="noopener">Tong Xu</a>.
+            </p>
 
-      <section id="education" class="section">
-        <h2>📖 Education</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-date">Current</span>
-            <div class="timeline-title">Ph.D. Candidate</div>
-            <div class="timeline-subtitle">University of Science and Technology of China (USTC)</div>
-            <div class="timeline-location">School of Artificial Intelligence and Data Science · after a two-year master's period</div>
-          </div>
-        </div>
-      </section>
+            <p>
+              My research mainly focuses on <strong>Large Language Models (LLMs)</strong> and <strong>Multimodal Learning</strong>. I am interested in building reliable, interpretable, and adaptive AI systems.
+            </p>
 
-      <section id="publications" class="section">
-        <h2>📝 Publications</h2>
+            <div class="research-interests">
+              <span class="interest-tag"><i class="fa fa-brain"></i> Large Language Models</span>
+              <span class="interest-tag"><i class="fa fa-layer-group"></i> Multimodal Learning</span>
+              <span class="interest-tag"><i class="fa fa-shield-halved"></i> Model Reliability</span>
+              <span class="interest-tag"><i class="fa fa-microscope"></i> AI for Science</span>
+            </div>
 
-        <article class="pub-box">
-          <div class="pub-box-image publication-placeholder">
-            <span class="pub-venue">Nat. Comput. Sci. 2026</span>
-            <div class="placeholder-title">Spatial Epigenomics</div>
+            <p>
+              You can find more information related to my research on my <a href="https://scholar.google.com/citations?user=PGgmEkIAAAAJ" target="_blank" rel="noopener">Google Scholar homepage</a>.
+            </p>
           </div>
-          <div class="pub-box-text">
-            <h3>Denoising spatial epigenomic data via deep matrix factorization</h3>
-            <p class="pub-authors">S Wang, H Xu, J Wang, <strong>Y Xiao</strong>, S Dai, J Lu, R Cao, X Chen, K Qu.</p>
-            <div class="pub-meta"><span>2026</span><span>Nature Computational Science</span></div>
-            <p class="pub-excerpt">A deep matrix factorization approach for denoising spatial epigenomic data.</p>
-          </div>
-        </article>
 
-        <article class="pub-box">
-          <div class="pub-box-image publication-placeholder">
-            <span class="pub-venue">TAFFC 2024</span>
-            <div class="placeholder-title">Music Emotion</div>
-          </div>
-          <div class="pub-box-text">
-            <h3>An Efficient Bi-modal Fusion Framework for Music Emotion Recognition</h3>
-            <p class="pub-authors"><strong>Yao Xiao</strong>, Haoxin Ruan, Xujian Zhao, Peiquan Jin, Li Tian, Xuebo Cai, Yixin Wang, Liang Liu.</p>
-            <div class="pub-meta"><span>2024</span><span>IEEE Transactions on Affective Computing</span></div>
-            <p class="pub-excerpt">A bi-modal fusion framework for music emotion recognition across complementary signal modalities.</p>
-          </div>
-        </article>
+          <h1 id="-news">📢 News</h1>
 
-        <article class="pub-box">
-          <div class="pub-box-image publication-placeholder">
-            <span class="pub-venue">Multimedia Systems 2025</span>
-            <div class="placeholder-title">Survey</div>
-          </div>
-          <div class="pub-box-text">
-            <h3>A survey on music emotion recognition using learning models</h3>
-            <p class="pub-authors">Yixin Wang, Xujian Zhao, Chuanpeng Deng, <strong>Yao Xiao</strong>, Haoxin Ruan, Peiquan Jin, Xuebo Cai.</p>
-            <div class="pub-meta"><span>2025</span><span>Multimedia Systems</span></div>
-            <p class="pub-excerpt">A survey of learning-based methods for music emotion recognition.</p>
-          </div>
-        </article>
-
-        <article class="pub-box">
-          <div class="pub-box-image publication-placeholder">
-            <span class="pub-venue">ICIC 2023</span>
-            <div class="placeholder-title">Self-Attention</div>
-          </div>
-          <div class="pub-box-text">
-            <h3><a href="https://link.springer.com/chapter/10.1007/978-981-99-4752-2_9" target="_blank" rel="noopener">Music emotion recognition using multi-head self-attention-based models</a></h3>
-            <p class="pub-authors"><strong>Yao Xiao</strong>, Haoxin Ruan, Xujian Zhao, Peiquan Jin, Xuebo Cai.</p>
-            <div class="pub-meta"><span>2023</span><span>International Conference on Intelligent Computing</span></div>
-            <p class="pub-excerpt">A multi-head self-attention based model for music emotion recognition.</p>
-            <div class="pub-links">
-              <a href="https://github.com/litxiaoyao" target="_blank" rel="noopener">Code</a>
-              <a href="https://link.springer.com/chapter/10.1007/978-981-99-4752-2_9" target="_blank" rel="noopener">Paper</a>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-date">2024.04</span>
+              <div class="timeline-title">One paper is accepted by TAFFC, 2024.</div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">2023.02</span>
+              <div class="timeline-title">One paper is accepted by ICIC, 2023.</div>
             </div>
           </div>
-        </article>
-      </section>
 
-      <section id="honors" class="section">
-        <h2>🏆 Honors & Scholarship</h2>
-        <div class="timeline compact">
-          <div class="timeline-item">
-            <span class="timeline-date">2025</span>
-            <div class="timeline-title">First-Class Scholarship of USTC</div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-date">2024</span>
-            <div class="timeline-title">First-Class Scholarship of USTC</div>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-date">2023</span>
-            <div class="timeline-title">AnHeng Scholarship</div>
-          </div>
-        </div>
-      </section>
+          <h1 id="-educations">📖 Educations</h1>
 
-      <footer class="site-footer">
-        <span>Last updated: 2026-07-06</span>
-      </footer>
-    </section>
-  </main>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-date">Present</span>
+              <div class="timeline-title">Ph.D. Candidate</div>
+              <div class="timeline-subtitle">University of Science and Technology of China (USTC)</div>
+              <div class="timeline-location"><i class="fa fa-map-marker-alt"></i> School of Artificial Intelligence and Data Science · after two-year master's period</div>
+            </div>
+          </div>
+
+          <h1 id="-publications">📝 Publications</h1>
+
+          <div class="pub-box">
+            <div class="pub-box-image">
+              <div class="pub-venue">Nat. Comput. Sci. 2026</div>
+              <div class="paper-thumb paper-thumb--science">Spatial Epigenomics</div>
+            </div>
+            <div class="pub-box-text">
+              <h3>Denoising spatial epigenomic data via deep matrix factorization</h3>
+              <p class="pub-authors">S Wang, H Xu, J Wang, <strong>Y Xiao</strong>, S Dai, J Lu, R Cao, X Chen, K Qu.</p>
+              <div class="pub-meta">
+                <span><i class="fa fa-calendar"></i> 2026</span>
+                <span><i class="fa fa-book"></i> Nature Computational Science</span>
+              </div>
+              <p class="pub-excerpt">Denoising spatial epigenomic data via deep matrix factorization.</p>
+            </div>
+          </div>
+
+          <div class="pub-box">
+            <div class="pub-box-image">
+              <div class="pub-venue">TAFFC 2024</div>
+              <div class="paper-thumb paper-thumb--music">Music Emotion</div>
+            </div>
+            <div class="pub-box-text">
+              <h3>An Efficient Bi-modal Fusion Framework for Music Emotion Recognition</h3>
+              <p class="pub-authors"><strong>Yao Xiao</strong>, Haoxin Ruan, Xujian Zhao, Peiquan Jin, Li Tian, Xuebo Cai, Yixin Wang, Liang Liu.</p>
+              <div class="pub-meta">
+                <span><i class="fa fa-calendar"></i> 2024</span>
+                <span><i class="fa fa-book"></i> IEEE Transactions on Affective Computing</span>
+              </div>
+              <p class="pub-excerpt">An efficient bi-modal fusion framework for music emotion recognition.</p>
+            </div>
+          </div>
+
+          <div class="pub-box">
+            <div class="pub-box-image">
+              <div class="pub-venue">Multimedia Systems 2025</div>
+              <div class="paper-thumb paper-thumb--survey">Survey</div>
+            </div>
+            <div class="pub-box-text">
+              <h3>A survey on music emotion recognition using learning models</h3>
+              <p class="pub-authors">Yixin Wang, Xujian Zhao, Chuanpeng Deng, <strong>Yao Xiao</strong>, Haoxin Ruan, Peiquan Jin, Xuebo Cai.</p>
+              <div class="pub-meta">
+                <span><i class="fa fa-calendar"></i> 2025</span>
+                <span><i class="fa fa-book"></i> Multimedia Systems</span>
+              </div>
+              <p class="pub-excerpt">A survey on music emotion recognition using learning models.</p>
+            </div>
+          </div>
+
+          <div class="pub-box">
+            <div class="pub-box-image">
+              <div class="pub-venue">ICIC 2023</div>
+              <div class="paper-thumb paper-thumb--attention">Self-Attention</div>
+            </div>
+            <div class="pub-box-text">
+              <h3><a href="https://link.springer.com/chapter/10.1007/978-981-99-4752-2_9" target="_blank" rel="noopener">Music emotion recognition using multi-head self-attention-based models</a></h3>
+              <p class="pub-authors"><strong>Yao Xiao</strong>, Haoxin Ruan, Xujian Zhao, Peiquan Jin, Xuebo Cai.</p>
+              <div class="pub-meta">
+                <span><i class="fa fa-calendar"></i> 2023</span>
+                <span><i class="fa fa-file-alt"></i> International Conference on Intelligent Computing</span>
+              </div>
+              <p class="pub-excerpt">Music emotion recognition using multi-head self-attention-based models.</p>
+              <div class="pub-links">
+                <a href="https://github.com/litxiaoyao" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/GitHub-Code-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Code"></a>
+                <a href="https://link.springer.com/chapter/10.1007/978-981-99-4752-2_9" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Paper-URL-6c5ce7?style=for-the-badge" alt="Paper URL"></a>
+              </div>
+            </div>
+          </div>
+
+          <h1 id="-honors-and-awards">🏆 Honors and Awards</h1>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-date">2025</span>
+              <div class="timeline-title">First-Class Scholarship of USTC</div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">2024</span>
+              <div class="timeline-title">First-Class Scholarship of USTC</div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">2023</span>
+              <div class="timeline-title">AnHeng Scholarship</div>
+            </div>
+          </div>
+
+          <footer class="site-footer">Last updated: 2026-07-06</footer>
+        </section>
+      </div>
+    </article>
+  </div>
+
+  <script>
+    (function() {
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeIcon = document.getElementById('theme-icon');
+      const htmlElement = document.documentElement;
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      htmlElement.setAttribute('data-theme', currentTheme);
+      updateThemeIcon(currentTheme);
+      if (themeToggle) {
+        themeToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          const current = htmlElement.getAttribute('data-theme');
+          const next = current === 'light' ? 'dark' : 'light';
+          htmlElement.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+          updateThemeIcon(next);
+        });
+      }
+      function updateThemeIcon(theme) {
+        if (!themeIcon) return;
+        themeIcon.classList.toggle('fa-sun', theme !== 'dark');
+        themeIcon.classList.toggle('fa-moon', theme === 'dark');
+      }
+    })();
+  </script>
 </body>
 </html>
